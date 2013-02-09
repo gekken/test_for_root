@@ -6,12 +6,12 @@ require 'test_for_root/version'
 Gem::Specification.new do |gem|
   gem.name          = "test_for_root"
   gem.version       = TestForRoot::VERSION
-  gem.authors       = ["gekken"]
+  gem.authors       = ["Peter Bomars"]
   gem.email         = ["pbomars@gmail.com"]
-  gem.description   = %q{TODO: Write a gem description}
-  gem.summary       = %q{TODO: Write a gem summary}
-  gem.homepage      = ""
-  gem.license       = "MIT"
+  gem.description   = %q{A gem that tests for root}
+  gem.summary       = %q{A gem that tests for root on *nix systems with a basic API}
+  gem.homepage      = "https://github.com/gekken/test_for_root"
+  gem.license       = "GPLv3"
 
   gem.files         = `git ls-files`.split($/)
   gem.executables   = gem.files.grep(%r{^bin/}) { |f| File.basename(f) }
