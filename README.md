@@ -3,16 +3,6 @@
 This gem is a simple file/permissions management tool that tests for super-user permissions and has a basic API to return
 user status at any point.
 
-##Classes
-
-TestForRoot::User
-###Methods
-\#name
-\#groups
-\#member?
-\#uid
-
-TestForRoot::Root
 
 
 ## Installation
@@ -31,7 +21,20 @@ Or install it yourself as:
 
 ## Usage
 
-TODO: Write usage instructions here
+
+###Classes
+
+TestForRoot::User
+####Methods
+>\#name
+
+>\#groups
+
+>\#member?
+
+>\#uid
+
+TestForRoot::Root
 
 ## Contributing
 
