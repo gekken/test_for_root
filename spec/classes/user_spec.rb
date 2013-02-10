@@ -5,47 +5,35 @@ describe TestForRoot::User do
       @demo = TestForRoot::User.new
     end
 
-    context 'it should respond to the various methods' do
+    describe 'it should respond to the various methods' do
       it 'should respond to #name' do
         @demo.should respond_to :name
       end
 
 
-=begin    these don't work
-    it 'should respond to #membership' do
-
-      TestForRoot::User.should respond_to :membership("#{@demo.name}")
 
     end
 
-    it 'should respond to #member?' do
-
-      TestForRoot::User.should respond_to :member?
-
-    end
-=end
-
-    end
-
-    context "#new" do
+    describe "#new" do
       it 'should create a new User object' do
         @demo.should be_an_instance_of TestForRoot::User
       end
 
+      # BROKEN
       #it 'should take no parameters' do
       #  TestForRoot::User.new(parameter).should raise_error
       #end
     end
 
 
-    context "#name" do
+    describe "#name" do
 
       it "should return the current username" do
         @demo.name.should eq `id -un`.chomp
       end
     end
 
-    context "#groups" do
+    describe "#groups" do
 
       it 'should be an array' do
         @demo.groups.should be_a Array
@@ -56,7 +44,7 @@ describe TestForRoot::User do
       end
     end
 
-    context "#member?" do
+    describe "#member?" do
 
       #it 'should take 1 argument' do
       #  @demo.member?.should raise_error
@@ -68,7 +56,7 @@ describe TestForRoot::User do
 
     end
 
-    context '#uid' do
+    describe '#uid' do
 
       it 'should return the $EUID of the program executor' do
         @demo.uid.should == %x{id -u}.chomp.to_i
